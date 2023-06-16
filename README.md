@@ -13,3 +13,10 @@ Use Airflow scheduled job and spotify API to update a playlist with songs from t
     - Generate statistics in excel from db (number of appereances of each track on the top)
 6. Create playlist `Airflow hits` in spotify if not exists
 7. Update the playlist with the depurated list of songs
+
+## Links of Interest
+- https://datascientest.com/es/todo-sobre-apache-airflow
+- https://www.youtube.com/watch?v=AHMm1wfGuHE&list=PLYizQ5FvN6pvIOcOd6dFZu3lQqc6zBGp2
+- https://rapidapi.com/LDVIN/api/billboard-api
+- https://www.youtube.com/watch?v=i25ttd32-eo
+- https://developer.spotify.com/documentation/web-api
