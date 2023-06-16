@@ -12,7 +12,7 @@ headers = {
 	"X-RapidAPI-Host": "billboard-api2.p.rapidapi.com"
 }
 
-def get_billboard_top_tracks():
+def get_billboard_top_tracks() -> list:
     current_date = datetime.today().strftime('%Y-%m-%d')
     top_range = "1-10" # free tier hard limit
 
@@ -20,7 +20,8 @@ def get_billboard_top_tracks():
     # response = requests.get(url, headers=headers, params=querystring)
     # print(response.json())
 
-    with open("mock.json") as mock:
+    with open("mocks/billboard.json") as mock:
         response = json.load(mock)
-    print(response)
 
+    return [ track for ranking, track in response["content"].items()]
+    
