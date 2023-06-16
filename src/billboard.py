@@ -5,10 +5,7 @@ import settings
 
 url = "https://billboard-api2.p.rapidapi.com/billboard-200"
 
-current_date = datetime.today().strftime('%Y-%m-%d')
-top_range = "1-10" # free tier hard limit
 
-querystring = {"date":current_date,"range":top_range}
 
 headers = {
 	"X-RapidAPI-Key": settings.X_RAPIDAPI_KEY,
@@ -16,6 +13,10 @@ headers = {
 }
 
 def get_billboard_top_tracks():
+    current_date = datetime.today().strftime('%Y-%m-%d')
+    top_range = "1-10" # free tier hard limit
+
+    querystring = {"date":current_date,"range":top_range}
     # response = requests.get(url, headers=headers, params=querystring)
     # print(response.json())
 
